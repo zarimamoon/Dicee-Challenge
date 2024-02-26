@@ -15,9 +15,13 @@ var randomImageSource2 = "images/dice" +randomNumber2 + ".png";
 
 document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
 
-var image2 = document.querySelectorAll("img")[0];
-
-image2.setAttribute("src", randomDiceImage);
-
-// Log the value of randomNumber1 to the console
-console.log("Random Number 1:", randomNumber1);
+//If player 1 wins
+if (randomNumber1 > randomNumber2) {
+    document.querySelector("h1").innerHTML = "🚩Player 1 Wins!"
+} 
+else if (randomNumber2 > randomNumber1) {
+    document.querySelector("h1").innerHTML = "🚩Player 2 Wins!"
+}
+else {
+    document.querySelector("h1").innerHTML = "Draw!"
+}
